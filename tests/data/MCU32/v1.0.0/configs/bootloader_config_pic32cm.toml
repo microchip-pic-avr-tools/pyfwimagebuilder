@@ -1,0 +1,34 @@
+# MDFU Bootloader Configuration
+
+[bootloader]
+
+# We will demonstrate using the already defined format used by the 8-bit library
+IMAGE_FORMAT_VERSION = "1.0.0"
+
+# Device Id of the PIC32CM1216MC00032
+DEVICE_ID = 0x11070000
+
+# Write size data bytes will be sent in each file block
+WRITE_BLOCK_SIZE = 0x40
+
+# Application start address
+FLASH_START = 0x00001000
+
+# Total flash size
+FLASH_END = 0x020000
+
+# EEPROM and Config spaces are not supported as of now
+EEPROM_START = 0x00000000
+EEPROM_END = 0x00000000
+CONFIG_START = 0x00000000
+CONFIG_END = 0x00000000
+
+# PIC32CM1216MC00032 Core
+ARCH = "M0+"
+
+# We will do this using the DSU CRC32
+VERIFICATION = "CRC-32"
+
+[host]
+# This bootloader communicated with the host over UART
+coms = "UART"

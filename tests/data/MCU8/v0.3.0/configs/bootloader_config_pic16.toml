@@ -1,0 +1,24 @@
+# MCU8 Bootloader Configuration
+
+# Configuration Data Specific to the generated bootloader
+[bootloader]
+IMAGE_FORMAT_VERSION = "0.3.0"
+PAGE_ERASE_KEY = 0xAA55
+PAGE_WRITE_KEY = 0xAA55
+PAGE_READ_KEY = 0x0000
+BYTE_WRITE_KEY = 0xAA55
+DEVICE_ID = 0x0000306D
+WRITE_BLOCK_SIZE = 0x0020
+FLASH_START = 0x00001000
+FLASH_END = 0x002000
+EEPROM_START = 0x00F000
+EEPROM_END = 0x00F0FF
+CONFIG_START = 0x008007
+CONFIG_END = 0x00800B
+ARCH = "PIC16"
+VERIFICATION = "CHECKSUM_VERIFICATION" # Example Addition for the APP UI
+
+# Data needed by the host
+# To Be Determined
+[host]
+coms = "UART"
